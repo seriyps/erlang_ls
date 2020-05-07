@@ -127,6 +127,7 @@ do_initialize(RootUri, Capabilities, {ConfigPath, Config}) ->
 
   ok = set( search_paths
           , lists:append([ ProjectDirs
+                         , project_paths(RootPath, DepsDirs, true)
                          , otp_paths(OtpPath, true)
                          ])
           ),
